@@ -195,4 +195,32 @@
         }
       }
     }
+    //=================== Gender Ratios and Tables================================================
+    .transaction-container{
+      display: flex;
+      gap: 2rem;
+      padding: 0 2rem 2rem 0;
+      height: 30rem;
+      >div{
+        background-color: white;
+        box-shadow: 0 10px 10px rgb(0,0,0,0.132);
+        border-radius: 20px;
+      }
+      .gender-charts{
+        position: relative;
+        width: 100%;
+        max-width: 20rem;
+        padding: 1rem;
+        >h2{
+          text-align: center;
+          @include mixins.heading;
+          margin: 1.5rem 0 2rem 0 ;
+        }
+        >p{
+          @include mixins.posCenter;
+          font-size: 2rem;
+          color: rgba(0,0,0,.634);
+        }
+      }
+    }
   }

@@ -4,7 +4,8 @@ import { BsSearch } from "react-icons/bs";
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import userImg from "../assets/userpic.png";
 import data from "../assets/data.json";
-import { BarCharts } from "../components/Charts";
+import { BarCharts, DoughnutChart } from "../components/Charts";
+import { BiMaleFemale } from "react-icons/bi";
 
 const Dashboard = () => {
   return (
@@ -79,7 +80,23 @@ const Dashboard = () => {
             </div>
           </div>
         </section>
-        {/* ====================PI Chart for Dashboard============================ */}
+        <section className="transaction-container">
+          {/* ====================GENDER Charts============================ */}
+          <div className="gender-charts">
+            <h2>Gender Ratio</h2>
+            {/* Charts */}
+            <DoughnutChart
+              data={[42, 56]}
+              labels={["Female", "Males"]}
+              backgroundColor={["hsl(340,82%,50%)", "rgba(53,162,235,0.8)"]}
+              cutout={90}
+            />
+            <p>
+              <BiMaleFemale />
+            </p>
+          </div>
+          {/* Tables */}
+        </section>
       </main>
     </div>
   );
