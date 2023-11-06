@@ -67,6 +67,8 @@
         }
   }
 
+  //=========================== Dashboard Header===================================================
+
   .dashboard{
     overflow-y: auto;
     .bar{
@@ -87,6 +89,7 @@
         border-radius: 50%;
       }  
     }
+    // ===========================================Wduget =================================================
     .widgetContainer{
       @include mixins.flex(row,space-between,stretch,2rem);
       padding: 2rem 2rem 2rem 0;
@@ -134,6 +137,7 @@
 
       }
     }
+    // ============================================Graphs and category================================
     .graphContainer{
       @include mixins.flex(row ,unset,unset, 2rem);
       padding: 0 2rem 2rem 0;
