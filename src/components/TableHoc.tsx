@@ -72,7 +72,7 @@ function TableHOC<T extends object>(
               Prev
             </button>
             <span>
-              `{pageIndex + 1} of {pageCount}`
+              {pageIndex + 1} of {pageCount}
             </span>
             <button disabled={!canNextPage} onClick={nextPage}>
               Next
