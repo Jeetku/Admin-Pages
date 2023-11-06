@@ -1,3 +1,8 @@
+@use "mixins";
+@use "dashboard";
+
+
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -23,4 +28,63 @@
   }
   .green {
     color: rgb(0, 195, 0);
+  }
+
+ 
+  .adminContainer{
+    @include mixins.grid(1fr 4fr,2rem);
+    height:100vh;
+    background-color:rgb(247,247,247);
+        >aside {
+            width:100%;
+            background-color:white;
+            padding:1rem;
+            z-index:10;
+            overflow-y:auto;
+            &::-webkit-scrollbar{
+              display:none;
+            }
+            >div{
+              margin:2rem 1rem;
+              >h5{
+                @include  mixins.heading(2px);
+                opacity:0.8;
+                margin:1rem;
+              }
+              >ul{
+                @include mixins.flex(column,unset,unset,0.5rem);
+                list-style:none;
+                >li{
+                  padding: 0.5rem 1rem;
+                  border-radius: 5px;
+                  >a{
+                    color: rgba(0,0,0,0.825);
+                    @include mixins.flex(row,unset)
+                  }
+                }
+              }
+            }
+        }
+  }
+
+  .dashboard{
+    overflow-y: auto;
+    .bar{
+      height: 4rem;
+      @include mixins.flex(unset,row);
+      padding: 0 1rem;
+      border-bottom: 1px solid  rgba(0,0,0,0.37);
+      > input {
+        margin-right: auto;
+        @include mixins.inputStyle(100%, 1rem 0);
+      }
+      > svg {
+        font-size: 1.2rem;
+        opacity: 0.7;
+      }
+      > img {
+        @include mixins.square(2rem);
+        border-radius: 50%;
+      }  
+    }
   }
