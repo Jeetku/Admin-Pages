@@ -67,159 +67,64 @@
         }
   }
 
-  //=========================== Dashboard Header===================================================
+  
 
-  .dashboard{
-    overflow-y: auto;
-    .bar{
-      height: 4rem;
-      @include mixins.flex(unset,row);
-      padding: 0 1rem;
-      border-bottom: 1px solid  rgba(0,0,0,0.37);
-      > input {
-        margin-right: auto;
-        @include mixins.inputStyle(100%, 1rem 0);
-      }
-      > svg {
-        font-size: 1.2rem;
-        opacity: 0.7;
-      }
-      > img {
-        @include mixins.square(2rem);
-        border-radius: 50%;
-      }  
+  .table{
+    border-collapse: collapse;
+    width: 100%;
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      vertical-align: middle;
     }
-    // ===========================================Wduget =================================================
-    .widgetContainer{
-      @include mixins.flex(row,space-between,stretch,2rem);
-      padding: 2rem 2rem 2rem 0;
-      .widget{
-        min-width:16rem;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0,0,0,0.132);
-        border-radius: 10px;
-        padding: 2rem;
-        @include mixins.flex(row,space-between,stretch,0);
-
-        .widgetInfo{
-          >p{
-            opacity: 0.7;
-            font-size: 0.8rem;
-          }
-          >h4{
-            font-size: 1.5rem;
-          }
-          >span{
-            @include mixins.flex(row,unset,center,0.2rem)
-          }
-
-        }
-        .widgetCircle{
-          position: relative;
-          @include mixins.square(5rem);
-          border-radius:50%;
-          display: grid;
-          place-items: center;
-          background-color: aquamarine;
-
-          &::before{
-            content: "";
-            position: absolute;
-            @include mixins.square(4rem);
-            background-color: white;
-            border-radius: 100%;
-
-          }
-          >span{
-            position: relative;
-          }
-        }
-
-      }
+    th {
+      font-weight: bold;
+      color: #0000009e;
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: 2rem 1rem;
     }
-    // ============================================Graphs and category================================
-    .graphContainer{
-      @include mixins.flex(row ,unset,unset, 2rem);
-      padding: 0 2rem 2rem 0;
-      >div{
-        background-color: white;
-        border-radius: 10px;
+    tbody {
+      tr {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.093);
       }
-      .revenue-chart{
-        width: 100%;
-        padding: 1rem 3rem;
-        >h2{
-          @include mixins.heading();
-          margin: 1rem 0 2rem 2.5rem ;
-          text-align: center;
-        }
-      }
-      .dashboard-categories{
-        width: 100%;
-        max-width: 16rem;
-        @include mixins.flex(column,center,unset,0);
-        padding-bottom: 2rem;
-        >h2{
-          @include mixins.heading();
-          margin: 1.5rem 0 2rem 0;
-          text-align: center;
-        }
-        >div{
-          overflow-y: auto;
-          padding-left: 0.5rem;
-        }
-        .category-item {
-          width: 100%;
-          @include mixins.flex(row, space-between);
-          padding: 1rem;
-          > h5 {
-            letter-spacing: 1px;
-            font-weight: 300;
-          }
-          > div {
-            margin-left: auto;
-            width: 6rem;
-            background-color: rgb(217, 217, 217);
-            border-radius: 20px;
-            height: 0.5rem;
-            flex: none;
-            > div {
-              border-radius: 20px;
-              height: 100%;
-            }
-          }
-          > span {
-            font-size: 0.8rem;
-            font-weight: 700;
-          }
-        }
-      }
-    }
-    //=================== Gender Ratios and Tables================================================
-    .transaction-container{
-      display: flex;
-      gap: 2rem;
-      padding: 0 2rem 2rem 0;
-      height: 30rem;
-      >div{
-        background-color: white;
-        box-shadow: 0 10px 10px rgb(0,0,0,0.132);
-        border-radius: 20px;
-      }
-      .gender-charts{
-        position: relative;
-        width: 100%;
-        max-width: 20rem;
+  
+      td {
         padding: 1rem;
-        >h2{
-          text-align: center;
-          @include mixins.heading;
-          margin: 1.5rem 0 2rem 0 ;
+  
+        img {
+          width: 4rem;
+          height: 4rem;
+          object-fit: contain;
+          border-radius: 10px;
         }
-        >p{
-          @include mixins.posCenter;
-          font-size: 2rem;
-          color: rgba(0,0,0,.634);
+        a {
+          text-decoration: none;
+          background-color: rgba(44, 104, 255, 0.455);
+          color: rgba(44, 104, 255);
+          padding: 0.25rem 0.5rem;
+          border-radius: 10px;
+        }
+        button {
+          width: 2rem;
+          height: 2rem;
+          font-size: 1.1rem;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+          color: rgb(255, 44, 44);
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        &:first-child {
+          border-left: none;
+        }
+  
+        &:last-child {
+          border-right: none;
         }
       }
     }

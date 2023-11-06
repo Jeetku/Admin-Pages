@@ -6,6 +6,7 @@ import userImg from "../assets/userpic.png";
 import data from "../assets/data.json";
 import { BarCharts, DoughnutChart } from "../components/Charts";
 import { BiMaleFemale } from "react-icons/bi";
+import DashboardTable from "../components/DashboardTable";
 
 const Dashboard = () => {
   return (
@@ -96,6 +97,7 @@ const Dashboard = () => {
             </p>
           </div>
           {/* Tables */}
+          <DashboardTable data={data.transaction} />
         </section>
       </main>
     </div>
