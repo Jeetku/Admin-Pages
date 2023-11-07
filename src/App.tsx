@@ -14,6 +14,10 @@ const TransactionManagement = lazy(
   () => import("./pages/management/TransactionManagement")
 );
 
+const BarCharts = lazy(() => import("./pages/charts/BarChart"));
+const PICharts = lazy(() => import("./pages/charts/PICharts"));
+const LineCharts = lazy(() => import("./pages/charts/LineCharts"));
+
 const App = () => {
   return (
     <>
@@ -26,6 +30,9 @@ const App = () => {
             <Route path="/admin/customer" element={<Customer />} />
 
             {/* Charts */}
+            <Route path="/admin/chart/bar" element={<BarCharts />} />
+            <Route path="/admin/chart/pi" element={<PICharts />} />
+            <Route path="/admin/chart/line" element={<LineCharts />} />
             {/* Apps */}
             {/* Management */}
             <Route path="/admin/product/new" element={<NewProduct />} />
