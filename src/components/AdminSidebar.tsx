@@ -96,8 +96,8 @@ const DivThree = ({ location }: { location: Location }) => (
         location={location}
       />
       <Li
-        url="/admin/app/cupon"
-        text="Cupon"
+        url="/admin/app/coupon"
+        text="Coupon"
         Icon={RiCoupon3Fill}
         location={location}
       />

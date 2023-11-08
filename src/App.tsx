@@ -19,7 +19,7 @@ const PICharts = lazy(() => import("./pages/charts/PICharts"));
 const LineCharts = lazy(() => import("./pages/charts/LineCharts"));
 const Stopwatch = lazy(() => import("./pages/apps/Stopwatch"));
 const Toss = lazy(() => import("./pages/apps/Toss"));
-const Coupon = lazy(() => import("./pages/apps/Cupon"));
+const Coupon = lazy(() => import("./pages/apps/Coupon"));
 
 const App = () => {
   return (
@@ -40,7 +40,7 @@ const App = () => {
             {/* Apps */}
             <Route path="/admin/app/stopwatch" element={<Stopwatch />} />
             <Route path="/admin/app/toss" element={<Toss />} />
-            <Route path="/admin/app/cupon" element={<Coupon />} />
+            <Route path="/admin/app/coupon" element={<Coupon />} />
 
             {/* Management */}
             <Route path="/admin/product/new" element={<NewProduct />} />
