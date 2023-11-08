@@ -187,4 +187,28 @@
     color: white;
     border-radius: 10px;
   }
+
+
+
+  .loader {
+    width: 100%;
+    height: 100vh;
+    @include mixins.flex;
+    > div {
+      @include mixins.square(10rem);
+      border-radius: 50%;
+      border-top: 1rem solid rgb(43, 43, 43);
+      border-left: 1rem solid rgb(43, 43, 43);
+      border-right: 1rem solid #fff;
+      border-bottom: 1rem solid #fff;
+      animation: loading-animation 0.5s linear infinite;
+    }
+  }
+
+
+  @keyframes loading-animation {
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
   
