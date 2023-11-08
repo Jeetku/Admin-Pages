@@ -39,7 +39,7 @@ const Stopwatch = () => {
       {/* SideBar */}
       <AdminSidebar />
       {/* Main */}
-      <main className="dasboard-app-container">
+      <main className="dashboard-app-container">
         <h1>StopWatch</h1>
         <section>
           <div className="stopwatch">

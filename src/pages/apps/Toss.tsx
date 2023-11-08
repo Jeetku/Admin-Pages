@@ -17,7 +17,7 @@ const Toss = () => {
       {/* SideBar */}
       <AdminSidebar />
       {/* Main */}
-      <main className="dasboard-app-container">
+      <main className="dashboard-app-container">
         <h1>Toss</h1>
         <section>
           <article
