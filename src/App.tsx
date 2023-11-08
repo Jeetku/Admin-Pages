@@ -34,7 +34,7 @@ const App = () => {
 
             {/* Charts */}
             <Route path="/admin/chart/bar" element={<BarCharts />} />
-            <Route path="/admin/chart/pi" element={<PICharts />} />
+            <Route path="/admin/chart/pie" element={<PICharts />} />
             <Route path="/admin/chart/line" element={<LineCharts />} />
 
             {/* Apps */}

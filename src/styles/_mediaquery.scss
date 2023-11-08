@@ -5,12 +5,12 @@
   
     .dashboard {
       .widgetContainer,
-      .graph-container,
+      .graphContainer,
       .transaction-container {
         justify-content: center;
         flex-wrap: wrap;
       }
-      .graph-container {
+      .graphContainer {
         padding: 2rem;
       }
       .transaction-container {
@@ -25,7 +25,7 @@
   }
   
   @media screen and (width<= 1100px) {
-    .admin-container {
+    .adminContainer {
       grid-template-columns: 1fr !important;
     }
   }
